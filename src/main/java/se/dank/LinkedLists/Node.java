@@ -9,6 +9,7 @@ public class Node<T> {
     this.next = null;
   }
 
+
   public T getValue() {
     return value;
   }
@@ -24,4 +25,12 @@ public class Node<T> {
   public void setNext(Node<T> next) {
     this.next = next;
   }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                ", next=" + this.hashCode() +
+                '}';
+    }
 }

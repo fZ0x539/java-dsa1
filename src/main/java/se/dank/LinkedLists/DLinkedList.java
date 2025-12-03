@@ -1,6 +1,5 @@
 package se.dank.LinkedLists;
 
-import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class DLinkedList<T> {
@@ -93,6 +92,21 @@ public class DLinkedList<T> {
       if (tmpNode == null) runLoop = false;
     }
     return false;
+  }
+
+  public T[] toArray(){
+      if (isEmpty())
+          return (T[]) new Object[0];
+
+
+      Node<T> currentNode = head;
+      T[] array = (T[]) new Object[length];
+      for(int i = 0; i < length - 1; i++){
+        array[i] = currentNode.getValue();
+        currentNode = currentNode.getNext();
+      }
+
+      return array;
   }
 
   public void print() {

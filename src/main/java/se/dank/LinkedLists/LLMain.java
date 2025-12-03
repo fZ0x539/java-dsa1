@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class LLMain {
-  public static void main(String[] args) {
-    LinkedList<Integer> linkedList = new LinkedList<>();
+    public static void main(String[] args) {
+//        LinkedList<Integer> linkedList = new LinkedList<>();
 //    list.addLast(10);
 //    list.addLast(20);
 //    list.addLast(50);
@@ -16,7 +16,7 @@ public class LLMain {
 //    var arr = list.toArray();
 //    System.out.println(Arrays.toString(arr));
 
-    DLinkedList<Integer> list = new DLinkedList<>();
+//        DLinkedList<Integer> dlist = new DLinkedList<>();
 //    list.addFirst(3);
 //    list.addLast(4);
 //    list.addLast(5);
@@ -34,8 +34,25 @@ public class LLMain {
 //    System.out.println("Contains 7: " + list.contains(7));
 //    System.out.println("Contains -1: " + list.contains(-1));
 //    System.out.println("Contains 10: " + list.contains(10));
-    list.addLast(10);
-    list.removeFirst();
-    list.print();
-  }
+//        list.addFirst(10);
+//        list.addLast(5);
+//        Object[] arr = list.toArray();
+//        Integer tmp = (Integer) arr[0];
+
+
+
+        //! MoshLinkedList
+        MLinkedList mlist = new MLinkedList();
+        mlist.addLast(10);
+        mlist.addLast(20);
+        mlist.addLast(30);
+        mlist.addLast(40);
+        mlist.addLast(50);
+        int[] arr = mlist.toArray();
+        System.out.println(Arrays.toString(arr));
+        mlist.reverse();
+        int[] reversedArr = mlist.toArray();
+        System.out.println(Arrays.toString(reversedArr));
+        System.out.println("K = 3, Kth: " + mlist.getKthNode(5));
+    }
 }
